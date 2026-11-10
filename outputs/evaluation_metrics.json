@@ -1,0 +1,54 @@
+{
+  "dataset": {
+    "rows": 18000,
+    "scenarios": 3000
+  },
+  "split": {
+    "train_rows": 14400,
+    "test_rows": 3600,
+    "train_scenarios": 2400,
+    "test_scenarios": 600,
+    "scenario_overlap": 0
+  },
+  "candidate_classification": {
+    "accuracy": 0.8577777777777778,
+    "precision": 0.554726368159204,
+    "recall": 0.7433333333333333,
+    "macro_f1": 0.7734954256693387,
+    "confusion_matrix_labels_0_then_1": [
+      [
+        2642,
+        358
+      ],
+      [
+        154,
+        446
+      ]
+    ]
+  },
+  "model_top1": {
+    "scenarios_evaluated": 600,
+    "correct": 519,
+    "accuracy": 0.865
+  },
+  "baseline_top1": {
+    "scenarios_evaluated": 600,
+    "correct": 600,
+    "accuracy": 1.0
+  },
+  "feature_columns": [
+    "signal_dbm",
+    "latency_ms",
+    "bandwidth_mbps",
+    "congestion_pct",
+    "distance_km",
+    "visible",
+    "eligible"
+  ],
+  "excluded_columns": [
+    "scenario_id",
+    "satellite_id",
+    "quality_score"
+  ],
+  "interpretation": "The target labels come from synthetic scoring rules. Metrics measure agreement with these labels, not real-world satellite-network performance."
+}
